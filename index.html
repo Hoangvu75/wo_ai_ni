@@ -16,7 +16,7 @@
             height: 100%;
             padding: 0;
             margin: 0;
-            background: linear-gradient(to top left, #00bfff 0%, #ffc2e0 100%);
+            background: linear-gradient(to left, #00bfff 0%, #ffc2e0 100%);
         }
 
         canvas {
@@ -71,7 +71,7 @@
     </div>
     
     <script>
-        function setCanvas(canvas_id) {
+        function setCanvas(canvas_id, color) {
             var settings = {
                 particles: {
                     length: 500, // maximum amount of particles
@@ -273,7 +273,7 @@
                     context.closePath();
 
                     // create the fill
-                    context.fillStyle = '#ea80b0';
+                    context.fillStyle = color;
                     context.fill();
 
                     // create the image
@@ -322,8 +322,8 @@
                 }, 10);
             })(document.getElementById(canvas_id));
         }
-        setCanvas('pinkboard_1');
-        setCanvas('pinkboard_2');
+        setCanvas('pinkboard_1', '#00bfff');
+        setCanvas('pinkboard_2',  '#ffc2e0');
     </script>
 </BODY>
 
